@@ -32,12 +32,12 @@ class CustomsUserManager(BaseUserManager):
 class CustomUser(AbstractBaseUser):
     username = models.CharField(verbose_name='user name', max_length=100, unique=True)
     email = models.EmailField(verbose_name='email address', max_length=255, unique=True,)
-    date_of_birth = models.DateField(verbose_name='date of birth', blank=True, null=True)
+    date_of_birth = models.DateField(verbose_name='date of birth', null=True)
     is_active = models.BooleanField(default=True, verbose_name='is user active')
     is_admin = models.BooleanField(default=False, verbose_name='is user admin')
 
-    first_name = models.CharField(verbose_name='first name', max_length=255, blank=True)
-    last_name = models.CharField(verbose_name='last name', max_length=255, blank=True)
+    first_name = models.CharField(verbose_name='first name', max_length=255, null=True)
+    last_name = models.CharField(verbose_name='last name', max_length=255, null=True)
 
     objects = CustomsUserManager()
 
