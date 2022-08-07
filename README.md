@@ -1,1 +1,1 @@
-Delete the .git directory to start a new project.
+Django server of pair-web service.
