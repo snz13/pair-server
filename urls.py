@@ -5,5 +5,5 @@ from settings import yasg_settings
 urlpatterns = [
     path('swagger/', yasg_settings.schema_view.with_ui('swagger', cache_timeout=0), name="swagger"),
     path('admin/', admin.site.urls),
-    path('core/', include('modules.core.apps.urls')),
+    path('core/api/', include('modules.core.urls')),
 ]
